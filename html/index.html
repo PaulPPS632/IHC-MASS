@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      
+      <div class="header"></div>
+    </header>
+    <button class="share-modal">¿donde quieres pedir hoy?</button>
+    <dialog class="modal modal-delivery modal-donde-comprar donde-comprar-delivery">
+      <header>
+        <button class="close-btn secndary" type="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-x"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M18 6l-12 12" />
+            <path d="M6 6l12 12" />
+          </svg>
+        </button>
+      </header>
+      <div>
+        <div class="container-btns">
+          <div class="btn-activo-modal btn-modal share-btn-delivery">
+            <svg
+              width="29"
+              height="29"
+              viewBox="0 0 29 29"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="29" height="29" fill="url(#pattern0_2308_103)" />
+              <defs>
+                <pattern
+                  id="pattern0_2308_103"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_2308_103"
+                    transform="scale(0.0111111)"
+                  />
+                </pattern>
+                <image
+                  id="image0_2308_103"
+                  width="90"
+                  height="90"
+                  xlink:href="data:image/png;base64,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"
+                />
+              </defs>
+            </svg>
+            <div>Delivery</div>
+          </div>
+          <div class="btn-inactivo-modal btn-modal share-btn-tienda">
+            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="23" height="23" fill="url(#pattern0_2437_8)"/>
+                <defs>
+                <pattern id="pattern0_2437_8" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_2437_8" transform="scale(0.0111111)"/>
+                </pattern>
+                <image id="image0_2437_8" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD+klEQVR4nO1cPU9UQRR9jajxBxgDzGwM1VrSmMDcVRMTC41/gdhYCPgzxEKjQuaCDYklf8JOsPGjoKYRSbRS6DHzCPHxoXvv7szOwJ6TvIRicj/OO3OGtzPvVRUAAAAAAAAAAMB5g+2sXhonfmrIf7TO71ni/XN5Ob9nyG8Y8vMT915fHCjJo523Y4b4a3YSaLCXIf8l9D4wJQ8jybZB9kCUHewid7M2N9nTy3PJia49ediJdryenGjreDd3ozb35Xg3PdG5m6QyLhBNIHo/twrPjKKt45luBRjn33eN0+FWimZEJHW41S1O6KFrHMczVQqMTy3dED0BdvhWjBtmUxEtICj00D2O3wucVDFx9e67K5b8Zgw1Bxjyq7mIDrklsUSqJr8ZuNHW2TcxEjUHGOe3shHt/JYolkTVihtXxZrmUjVboT8nsw6hT8tVHcGvxb6sULMV3rikRAuJkaq6L7+W+rJGzSobSki0ZrqLVd2rX2sIkapZ489JiRb6tErVvfi1Znpr1GwV/pzUOhQ+rVO1wq9VvqxUs1XcwOREKxYwjapFfq3xZa2a1XaUmGjtNFepuptfa4nQqFnrz8mJVvi0WtXdbqTmt2ZD/EtNhCspvv+drX7N7kkvuwympPjkN7LVH7bUFYFmeyh0vpj4Pez7Ras/7O6GXV5BkM/t9tqIttAJxD9+ZuPfZAeSx+7wqJbkguJ/Mm7lWhH118qbXp4LPlMvAI53jfMfwnToRcllxOf1ED/GmYzU9QMAAABnAJOTKxcs+UfG+SeSxaXdXhtpOX4sXYzqxcbxrDS+dnx9UNPxbKhJsngdxg89h96rVBi7+eLy9akVM07LDwz5l5Z4u/Go+cOSX2w5fhh+egxjm+Ot86+M453TxrduL9nD8eHvOgb5xYMxjfHOv+l3fKjtYDwvWed/Nv4d2wk1hlpDzSfHH40feg8cmGl//3B8NKKlT0PDelUgmkG0LUCJUDTlJw/WQfmJhUcTiN7PrToomvITBeug/CQW7dHREjdQQi4QHRkgmqBoWEcMwKMZHl0lADya4NHw6BiARzM8ukoAeDTBo+HRZ2EqtdtrI9b555b893qH3fHC8WMAklySOCX0my2xdbxwIo7jBUkN2jgl9JstsT1Q4JEY4byFpAZtnBL6zZbYNg7k/FWi/yapQRunhH6zJbanTHlD/ExSgzZOCf1mS9yuF7GapO3+F8P/xymh3/ISN1BCLhAdGSCaoGhYRwzAoxkeXZ0rj1Z++DVa4gZKyBXr4wDRPmVcJYAtleiYnzjWvGw+hETPRkssfVl+2Ig2PX58oK+XzYeNaNPnxwF0L5sX0Hw1wFx4uR4AAAAAAAAAgOo84g+xOf7A4NRJBAAAAABJRU5ErkJggg=="/>
+                </defs>
+                </svg>
+                
+                
+            <div>Tienda</div>
+          </div>
+        </div>
+        <div class="form-modal">
+          <select name="Departamento" id="" class="item-form-modal">
+            <option value="Lima">Lima</option>
+            <option value="Trujillo">Trujillo</option>
+            <option value="Arequipa">Arequipa</option>
+          </select>
+          <select name="Provincia" id="" class="item-form-modal">
+            <option value="Lima">Lima</option>
+          </select>
+          <select
+            name="Distrito"
+            id=""
+            aria-placeholder="Distrito"
+            class="item-form-modal"
+          >
+            <option value="Santa Anita">Santa Anita</option>
+            <option value="Miraflores">Miraflores</option>
+            <option value="San Borja">San Borja</option>
+            <option value="Los Olivos">Los Olivos</option>
+          </select>
+
+          <input type="text" placeholder="Direccion" class="item-form-modal"/>
+          <div class="separator">
+            <div class="separator-line"></div>
+            <div class="separator-text">o comparte tu ubicacion</div>
+            <div class="separator-line"></div>
+          </div>
+          <div class="btn-ubicacion">
+            <div>Compartir Ubicacion</div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </dialog>
+    <dialog class="modal modal-tienda modal-donde-comprar donde-comprar-tienda">
+        <header>
+          <button class="close-btn secndary" type="button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-x"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M18 6l-12 12" />
+              <path d="M6 6l12 12" />
+            </svg>
+          </button>
+        </header>
+        <div>
+          <div class="container-btns">
+            <div class="btn-inactivo-modal btn-modal share-btn-delivery">
+                <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="29" height="29" fill="url(#pattern0_2437_6)"/>
+                    <defs>
+                    <pattern id="pattern0_2437_6" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2437_6" transform="scale(0.0172414)"/>
+                    </pattern>
+                    <image id="image0_2437_6" width="58" height="58" xlink:href="data:image/png;base64,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"/>
+                    </defs>
+                    </svg>
+                    
+              <div>Delivery</div>
+            </div>
+            <div class="btn-activo-modal btn-modal share-btn-tienda">
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="23" height="23" fill="url(#pattern0_2437_7)"/>
+                    <defs>
+                    <pattern id="pattern0_2437_7" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2437_7" transform="scale(0.0111111)"/>
+                    </pattern>
+                    <image id="image0_2437_7" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD+klEQVR4nO1cPU9UQRR9jajxBxgDzGwM1VrSmMDcVRMTC41/gdhYCPgzxEKjQuaCDYklf8JOsPGjoKYRSbRS6DHzCPHxoXvv7szOwJ6TvIRicj/OO3OGtzPvVRUAAAAAAAAAAMB5g+2sXhonfmrIf7TO71ni/XN5Ob9nyG8Y8vMT915fHCjJo523Y4b4a3YSaLCXIf8l9D4wJQ8jybZB9kCUHewid7M2N9nTy3PJia49ediJdryenGjreDd3ozb35Xg3PdG5m6QyLhBNIHo/twrPjKKt45luBRjn33eN0+FWimZEJHW41S1O6KFrHMczVQqMTy3dED0BdvhWjBtmUxEtICj00D2O3wucVDFx9e67K5b8Zgw1Bxjyq7mIDrklsUSqJr8ZuNHW2TcxEjUHGOe3shHt/JYolkTVihtXxZrmUjVboT8nsw6hT8tVHcGvxb6sULMV3rikRAuJkaq6L7+W+rJGzSobSki0ZrqLVd2rX2sIkapZ489JiRb6tErVvfi1Znpr1GwV/pzUOhQ+rVO1wq9VvqxUs1XcwOREKxYwjapFfq3xZa2a1XaUmGjtNFepuptfa4nQqFnrz8mJVvi0WtXdbqTmt2ZD/EtNhCspvv+drX7N7kkvuwympPjkN7LVH7bUFYFmeyh0vpj4Pez7Ras/7O6GXV5BkM/t9tqIttAJxD9+ZuPfZAeSx+7wqJbkguJ/Mm7lWhH118qbXp4LPlMvAI53jfMfwnToRcllxOf1ED/GmYzU9QMAAABnAJOTKxcs+UfG+SeSxaXdXhtpOX4sXYzqxcbxrDS+dnx9UNPxbKhJsngdxg89h96rVBi7+eLy9akVM07LDwz5l5Z4u/Go+cOSX2w5fhh+egxjm+Ot86+M453TxrduL9nD8eHvOgb5xYMxjfHOv+l3fKjtYDwvWed/Nv4d2wk1hlpDzSfHH40feg8cmGl//3B8NKKlT0PDelUgmkG0LUCJUDTlJw/WQfmJhUcTiN7PrToomvITBeug/CQW7dHREjdQQi4QHRkgmqBoWEcMwKMZHl0lADya4NHw6BiARzM8ukoAeDTBo+HRZ2EqtdtrI9b555b893qH3fHC8WMAklySOCX0my2xdbxwIo7jBUkN2jgl9JstsT1Q4JEY4byFpAZtnBL6zZbYNg7k/FWi/yapQRunhH6zJbanTHlD/ExSgzZOCf1mS9yuF7GapO3+F8P/xymh3/ISN1BCLhAdGSCaoGhYRwzAoxkeXZ0rj1Z++DVa4gZKyBXr4wDRPmVcJYAtleiYnzjWvGw+hETPRkssfVl+2Ig2PX58oK+XzYeNaNPnxwF0L5sX0Hw1wFx4uR4AAAAAAAAAgOo84g+xOf7A4NRJBAAAAABJRU5ErkJggg=="/>
+                    </defs>
+                    </svg>
+                    
+  
+              <div>Tienda</div>
+            </div>
+          </div>
+          <div class="form-modal">
+            <select name="Departamento" id="" class="item-form-modal">
+              <option value="Lima">Lima</option>
+              <option value="Trujillo">Trujillo</option>
+              <option value="Arequipa">Arequipa</option>
+            </select>
+            <select name="Provincia" id="" class="item-form-modal">
+              <option value="Lima">Lima</option>
+            </select>
+            <select
+              name="Distrito"
+              id=""
+              aria-placeholder="Distrito"
+              class="item-form-modal"
+            >
+              <option value="Santa Anita">Santa Anita</option>
+              <option value="Miraflores">Miraflores</option>
+              <option value="San Borja">San Borja</option>
+              <option value="Los Olivos">Los Olivos</option>
+            </select>
+  
+            <div class="tabs-content">
+                <div class="tabs-item">
+                    <div class="tabs-check" id="check-1"></div>
+                    <div class="tabs-description">
+                        <div class="tabs-description-nombre">Mass Bolognesi - Santa Anita</div>
+                        <div class="tabs-description-direccion">av. Bolognesi 1245</div>
+                    </div>
+                </div>
+                <div class="tabs-item">
+                    <div class="tabs-check" id="check-2"></div>
+                    <div class="tabs-description">
+                        <div class="tabs-description-nombre">Mass Bolognesi - Santa Anita</div>
+                        <div class="tabs-description-direccion">av. Bolognesi 1245</div>
+                    </div>
+                </div>
+                <div class="tabs-item" >
+                    <div class="tabs-check" id="check-3"></div>
+                    <div class="tabs-description">
+                        <div class="tabs-description-nombre">Mass Bolognesi - Santa Anita</div>
+                        <div class="tabs-description-direccion">av. Bolognesi 1245</div>
+                    </div>
+                </div>
+                <div class="tabs-item" >
+                    <div class="tabs-check" id="check-4"></div>
+                    <div class="tabs-description">
+                        <div class="tabs-description-nombre">Mass Bolognesi - Santa Anita</div>
+                        <div class="tabs-description-direccion">av. Bolognesi 1245</div>
+                    </div>
+                </div>
+                <div class="tabs-item">
+                    <div class="tabs-check" id="check-5"></div>
+                    <div class="tabs-description">
+                        <div class="tabs-description-nombre">Mass Bolognesi - Santa Anita</div>
+                        <div class="tabs-description-direccion">av. Bolognesi 1245</div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="btn-ubicacion">
+              <div>Confirmar</div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </dialog>
+    <script src="../js/codigo.js"></script>
+  </body>
+</html>
