@@ -25,29 +25,27 @@ document.querySelector(".share-modal").addEventListener("click", ()=>{
     Math.random() < 0.5 ? modalDialogTienda.showModal() : modalDialogDelivery.showModal();
 })
 
-const AllTabsItems = document.querySelectorAll(".tabs-item");
+// const AllTabsItems = document.querySelectorAll(".tabs-item");
 
-
-
-AllTabsItems.forEach((e) =>{
-    e.addEventListener("click", () =>{
-        AllTabsItems.forEach((f) =>{
-            const divcheck_e = e.querySelector(".tabs-check");
-            const divcheckId = divcheck_e.id;
-            AllTabsItems.forEach((g)=>{
-                const divcheck_g = g.querySelector(".tabs-check");
-                if(divcheckId == divcheck_g.id){
+// AllTabsItems.forEach((e) =>{
+//     e.addEventListener("click", () =>{
+//         AllTabsItems.forEach((f) =>{
+//             const divcheck_e = e.querySelector(".tabs-check");
+//             const divcheckId = divcheck_e.id;
+//             AllTabsItems.forEach((g)=>{
+//                 const divcheck_g = g.querySelector(".tabs-check");
+//                 if(divcheckId == divcheck_g.id){
                     
-                    if(divcheck_g.classList.contains("check-active")){
-                        divcheck_g.classList.remove("check-active");
-                    }else{
-                        divcheck_g.classList.add("check-active");
-                    }
-                }else{
-                    divcheck_g.classList.remove("check-active");
-                }
-            })
+//                     if(divcheck_g.classList.contains("check-active")){
+//                         divcheck_g.classList.remove("check-active");
+//                     }else{
+//                         divcheck_g.classList.add("check-active");
+//                     }
+//                 }else{
+//                     divcheck_g.classList.remove("check-active");
+//                 }
+//             })
             
-        });
-    })
-});
+//         });
+//     })
+// });
